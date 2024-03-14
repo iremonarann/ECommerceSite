@@ -1,0 +1,12 @@
+<h3 class="mt-2 pb-2 border-bottom border-black">Ürünler</h3>
+<div class="list-group">
+    <div *ngFor="let product of products" class="list-group-item flex-column align-items-start"
+        aria-current="true">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{product.name}}</h5>
+            <button class="btn btn-sm btn-outline-primary" (click)="addToCart(product)">Sepete Ekle</button>
+        </div>
+        <p class="mb-1">{{product.unitPrice | currency:'₺':false:'1.2-2'}}</p>
+        <small class="text-muted">{{product.quantityPerUnit}}</small>
+    </div>
+</div>

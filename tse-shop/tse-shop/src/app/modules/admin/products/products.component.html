@@ -1,0 +1,27 @@
+<div class="table-responsive">
+    <table class="table table-light">
+        <thead>
+            <tr>
+                <th scope="col">Ürün Adı</th>
+                <th scope="col">Fiyatı</th>
+                <th scope="col">Stok Miktarı</th>
+                <th scope="col">Açıklama</th>
+                <th scope="col">
+                    <a [routerLink]="['/admin','product-save']" class="btn btn-sm btn-info">Yeni Ürün Ekle</a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products" class="">
+                <td scope="row">{{product.name}}</td>
+                <td scope="row">{{product.unitPrice | currency:'₺'}}</td>
+                <td scope="row">{{product.unitsInStock}}</td>
+                <td scope="row">{{product.quantityPerUnit}}</td>
+                <td scope="row">
+                    <a [routerLink]="['/admin','product-save',product.id]" class="btn btn-sm btn-info">Güncelle</a>
+                    <button class="btn btn-sm btn-danger ms-3" (click)="remove(product)">Sil</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
