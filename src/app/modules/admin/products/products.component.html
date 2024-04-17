@@ -1,0 +1,27 @@
+<div class="table-responsive">
+    <table class="table table-light">
+        <thead>
+            <tr>
+                <th scope="col" style="color: #6820f7;">Product Name</th>
+                <th scope="col" style="color: #6820f7;">Price</th>
+                <th scope="col" style="color: #6820f7;">Amount</th>
+                <th scope="col" style="color: #6820f7;">Definition</th>
+                <th scope="col">
+                    <a [routerLink]="['/admin','product-save']" style="color: #6820f7;">Add New Product</a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products" class="">
+                <td scope="row">{{product.name}}</td>
+                <td scope="row">{{product.unitPrice | currency: '$'}}</td>
+                <td scope="row">{{product.unitsInStock}}</td>
+                <td scope="row">{{product.quantityPerUnit}}</td>
+                <td scope="row">
+                    <a [routerLink]="['/admin', 'product-save', product.id]" class="btn btn-sm btn-secondary">Güncelle</a>
+                    <button class="btn btn-sm btn-secondary ms-3" (click)="remove(product)">Sil</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

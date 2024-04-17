@@ -1,0 +1,9 @@
+<h3 class="mt-3" style="color: #6820f7; font-family:cursive;">
+    {{ title }}
+</h3>
+<div class="list-group">
+    <a *ngFor="let category of categories" routerLink="/urunler/{{category.id}}"
+    routerLinkActive="disabled"
+    class="list-group-item list-group-item-action" style="border-color: #6820f796; font-family:cursive;">
+    {{category.name | uppercase | titlecase}}</a>
+</div>

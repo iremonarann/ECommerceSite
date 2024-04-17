@@ -1,0 +1,20 @@
+<main class="form-signin w-50 m-auto container-sm mt-5 text-center">
+    <form #frmLogin="ngForm" (submit)="login(frmLogin)">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-brilliance"
+            style="color: #6820f7;" viewBox="0 0 16 16">
+            <path
+                d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16M1 8a7 7 0 0 0 7 7 3.5 3.5 0 1 0 0-7 3.5 3.5 0 1 1 0-7 7 7 0 0 0-7 7" />
+        </svg>
+        <h1 class="h3 mb-3 fw-normal mt-2" style="color:#6820f7;">Lütfen Giriş Yapınız!</h1>
+        <div class="form-floating mt-4">
+            <input ngModel name="username" type="text" class="form-control" required>
+            <label>Kullanıcı Adı</label>
+        </div>
+        <div class="form-floating">
+            <input ngModel name="password" type="password" class="form-control" required>
+            <label>Şifre</label>
+        </div>
+        <button [disabled]="frmLogin.invalid" class="btn w-100 py-2 mt-3" type="submit" style="background-color:#6820f7; color:#ffffff">Giriş Yap</button>
+        <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2024</p>
+    </form>
+</main>

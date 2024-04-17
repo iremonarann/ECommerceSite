@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <nav class="navbar navbar-expand mt-2 mb-4 rounded" style="background-color: #6820f7;">
+                <ul class="nav navbar-nav ms-2">
+                    <a class="navbar-brand" routerLink="/">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-brilliance" style="color: #ffffff" viewBox="0 0 16 16">
+                            <path
+                                d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16M1 8a7 7 0 0 0 7 7 3.5 3.5 0 1 0 0-7 3.5 3.5 0 1 1 0-7 7 7 0 0 0-7 7" />
+                        </svg>
+                    </a>
+                </ul>
+                <ul class="nav navbar-nav ms-auto">
+                    <li class="nav-item me-4">
+                        <button class="btn btn-sm btn-light" (click)="logout">Log out</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

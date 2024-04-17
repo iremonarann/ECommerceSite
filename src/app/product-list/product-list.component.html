@@ -1,0 +1,15 @@
+<h3 class="mt-3" style="color: #6820f7; font-family:cursive;">Products</h3>
+<div class="list-group">
+    <div *ngFor="let product of products" class="list-group-item list-group-item-action flex-column align-items-start"
+        style="border-color: #6820f796;">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1" >{{product.name}}</h5>
+            <button class="btn btn-sm btn-outline-light" style="border-color: #6820f7; color: #6820f7;"
+                onmouseover="this.style.backgroundColor='#6820f7'; this.style.color='#ffffff'"
+                onmouseout="this.style.backgroundColor=''; this.style.color='#6820f7'" (click)="addToCart(product)" >Add to Cart
+            </button>
+        </div>
+        <p class="mb-1" style="font-family:cursive;">{{product.unitPrice | currency:'$':false:'1.2-2':'en-EN'}}</p>
+        <small class="text-muted"><em>{{product.quantityPerUnit}}</em></small>
+    </div>
+</div>

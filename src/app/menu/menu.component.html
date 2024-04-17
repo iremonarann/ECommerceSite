@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #6820f7">
+    <div class="container">
+
+        <a class="navbar-brand" routerLink="/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-brilliance"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16M1 8a7 7 0 0 0 7 7 3.5 3.5 0 1 0 0-7 3.5 3.5 0 1 1 0-7 7 7 0 0 0-7 7" />
+            </svg>
+        </a>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/account/login" routerLinkActive="active"
+                        style="font-family:cursive;">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/urunler" routerLinkActive="active" aria-current="page"
+                        style="font-family:cursive;">Products</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false" style="font-family:cursive;">Admin</a>
+                    <div class="dropdown-menu mt-2">
+                        <a class="dropdown-item" style="color:#6820f7; font-family: cursive;" routerLink="/admin/products">Products</a>
+                        <a class="dropdown-item" style="color:#6820f7; font-family: cursive;" routerLink="/admin/product-save">Add New Product</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="d-flex my-lg-0">
+                <input class="form-control me-sm-2" type="text" placeholder="Search" />
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+                    Search
+                </button>
+            </form>
+
+            <div class="ms-2 navbar-text text-white">
+                <app-cart-summary />
+            </div>
+        </div>
+    </div>
+</nav>
